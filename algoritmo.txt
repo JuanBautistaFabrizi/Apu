@@ -1,0 +1,10 @@
+1:dar bienvenida
+2:login(con un ícono de una puerta)
+3:Menu 
+*¿quienes somos?
+*sucursales
+*menu de compra  
+*contacto
+
+
+
