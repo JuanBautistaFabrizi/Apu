@@ -18,10 +18,11 @@
                     <a href="menus.html">Inicius</a>
                     <a href="#nosotros">¿Quienes somus?</a>
                     <a href="#franquicias">Abrí tu franquicias</a>
+                    <a href="#golosinas">Golosinas</a>
                     <a href="#bebidas">Bebidus</a>
-                    <a href="#">Trabaja con Nosotrus</a>
-                    <a href="#">Contactus</a>
-                    <a href="">Cerrar sesión</a>
+                    <a href="#form-trabaja">Trabaja con Nosotros</a>
+                    <a href="#contactus">Contactus</a>
+                    <a href="#cerrarsesion">Cerrar sesión</a>
                 </nav>
             </div>
         </div>
@@ -88,11 +89,108 @@
         <button class="franquicia-btn">más info</button>
     </section>
 
+    <section id="golosinas">
+        <div class="container">
+            <div class="container-div">
+                <h3>alfajor</h3>
+                <button class="container-btn" onclick="comprarComida();">comprar</button>
+            </div>
+            <div class="container-div">
+                <h3>Gummi Venus de Milo</h3>
+                <button class="container-btn" onclick="comprarComida();">comprar</button>
+            </div>
+            <div class="container-div">
+                <h3>chupetin</h3>
+                <button class="container-btn" onclick="comprarComida();">comprar</button>
+            </div>
+            <div class="container-div">
+                <h3>sugus</h3>
+                <button class="container-btn" onclick="comprarComida();">comprar</button>
+            </div>
+            <div class="container-div">
+                <h3>yummis</h3>
+                <button class="container-btn" onclick="comprarComida();">comprar</button>
+            </div>
+            <div class="container-div">
+                <h3>chocolates</h3>
+                <button class="container-btn" onclick="comprarComida();">comprar</button>
+            </div>
+        </div>
+    </section>
+
     <section class="bebidas" id="bebidas">
         <div></div>
         <div>
             <button class="bebidas-+18" onclick="bebidasAlcoholicas();">+18</button>
         </div>
+        <div class="container-div">
+            <h3>cola</h3>
+            <button class="container-btn" onclick="carrito();">comprar</button>
+        </div>
+        <div class="container-div">
+            <h3>limonada</h3>
+            <button class="container-btn" onclick="carrito();">comprar</button>
+        </div>
+        <div class="container-div">
+            <h3>fanta</h3>
+            <button class="container-btn" onclick="carrito();">comprar</button>
+        </div>
+        <div class="container-div">
+            <h3>lima limon</h3>
+            <button class="container-btn" onclick="carrito();">comprar</button>
+        </div>
+        <div class="container-div">
+            <h3>cola</h3>
+            <button class="container-btn" onclick="carrito();">comprar</button>
+        </div>
+        <div class="container-div">
+            <h3>bebida sin alcohol</h3>
+            <button class="container-btn" onclick="carrito();">comprar</button>
+        </div>
+    </div>
+    </section>
+    <section id="form-trabaja">
+        <img src="./img/TrabajaConNosotrus.png" alt="apu trapeando">
+        <form action="" class="form">
+            <label for="" class="form-label">Nombre</label>
+            <input type="text" class="form-input">
+            <label class="form-input" for="" >Apellido</label>
+            <input class="form-input" type="text">
+            <label for="" class="form-label">Domicilio</label>
+            <input class="form-input" type="text" >
+            <label for="" class="form-label">Grado de estudio más alto que haya alcanzado</label>
+            <select name="estudio" id="estudio">
+                <option selected="true" value="">Primario</option>
+                <option value="">Secundario</option>
+                <option value="">Terciario</option>
+                <option value="">Universitario</option>
+            </select>
+            <label for="" class="form-label">Experiencia laboral</label>
+            <input type="text">
+            <label for="" class="form-label">Conocimientos</label>
+            <input class="form-input" type="text">
+            <label for="" class="form-label">Aptitudes</label>
+            <input class="form-input" type="text">
+            <label for="" class="form-label">FODA</label>
+            <label for="">Contanos algo más sobre vos</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            
+        </form>
+            
+    </section>
+    <section id="contactus">
+        <form class="form-contacto" action="">
+            <label class="label-contacto" for="">Nombre</label>
+            <input class="form-contacto" type="text">
+            <label class="label-contacto" for="">Email</label>
+            <input class="form-contacto" type="text">
+            <label class="label-contacto" for="">Teléfono</label>
+            <input class="form-contacto" type="text">
+            <button type="button"></button>
+        </form>
+    </section>
+    <section id="cerrarsesion">
+        <button class="cerrar-btn" type="button" onclick="cerrarSesion();">Cerrar sesión</button>
     </section>
     <script src="./app.js"></script>
 </body>
