@@ -31,7 +31,7 @@ function store(){
         localStorage.setItem('name', name.value);
         localStorage.setItem('pw', pw.value);
         alert('Su cuentas ha sido creadas');
-        window.location.href ="http://127.0.0.1:5500/login.html";
+        window.location.href ="localhost:5500/login.html";
     }
 }
 
@@ -63,8 +63,20 @@ function bebidasAlcoholicas() {
     if (edad >= 18) {
         window.location.replace("./bebidasalcoholicas.html");
     }else{
-
+        alert("sabés cuanta cindor te hace faltas!!!!!!");
     }
+}
+        
+function carrito(){
+    alert("Que disfrutes sus bebidas");
+}
+
+function comprarComida() {
+    alert("Que disfrutes sus bebidas");
+}
+
+function cerrarSesion() {
+    window.location.replace("./login");
 }
         
 
