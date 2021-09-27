@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body onload="init();">
+<body>
     <header class="bg_animate">
         <div class="header_nav">
             <div class="contenedor">
@@ -94,27 +94,27 @@
         <div class="container">
             <div class="container-div">
                 <h3>Alfajor</h3>
-                <button class="container-btn"  id="alfajor" onclick="sumarItem(Producto.alfajor);">comprar</button>
+                <button class="container-btn"  id="btnalfajor" >comprar</button>
             </div>
             <div class="container-div">
                 <h3>Gummi Venus de Milo</h3>
-                <button class="container-btn"  id="gummiMilo" onclick="sumarItem(Producto.gummiMilo);">comprar</button>
+                <button class="container-btn"  id="btngummiMilo" >comprar</button>
             </div>
             <div class="container-div">
                 <h3>Chupetin</h3>
-                <button class="container-btn"  id="chupetin" onclick="sumarItem(Producto.chupetin);">comprar</button>
+                <button class="container-btn"  id="btnchupetin" >comprar</button>
             </div>
             <div class="container-div">
                 <h3>Sugus</h3>
-                <button class="container-btn" id="sugus" onclick="sumarItem(Producto.sugus);">comprar</button>
+                <button class="container-btn" id="btnsugus" >comprar</button>
             </div>
             <div class="container-div">
                 <h3>Yummys</h3>
-                <button class="container-btn"  id="yummys" onclick="sumarItem(Producto.yummys);">comprar</button>
+                <button class="container-btn"  id="btnyummys" >comprar</button>
             </div>
             <div class="container-div">
                 <h3>Chocolates</h3>
-                <button class="container-btn" id="chocolate" onclick="sumarItem(Producto.chocolates);">comprar</button>
+                <button class="container-btn" id="btnchocolate" >comprar</button>
             </div>
         </div>
     </section>
@@ -126,27 +126,27 @@
         </div>
         <div class="container-div">
             <h3>Buzz cola</h3>
-            <button class="container-btn" onclick="sumarItem(Producto.buzzCola);">comprar</button>
+            <button class="container-btn" id="btnbuzzcola">comprar</button>
         </div>
         <div class="container-div">
             <h3>Limonada</h3>
-            <button class="container-btn" onclick="sumarItem(Producto.limonada);">comprar</button>
+            <button class="container-btn" id="btnlimonada">comprar</button>
         </div>
         <div class="container-div">
             <h3>Fanta</h3>
-            <button class="container-btn" onclick="sumarItem(Producto.fanta);">comprar</button>
+            <button class="container-btn" id="btnfanta">comprar</button>
         </div>
         <div class="container-div">
             <h3>Lima Limón</h3>
-            <button class="container-btn" onclick="sumarItem(Producto.limaLimon);">comprar</button>
+            <button class="container-btn" id="btnlimalimon">comprar</button>
         </div>
         <div class="container-div">
             <h3>Gatorade</h3>
-            <button class="container-btn" onclick="sumarItem(Producto.gatorade);">comprar</button>
+            <button class="container-btn" id="btngatorade">comprar</button>
         </div>
         <div class="container-div">
             <h3>Cepita</h3>
-            <button class="container-btn" onclick="sumarItem(Producto.cepita);">comprar</button>
+            <button class="container-btn" id="btncepita">comprar</button>
         </div>
     </div>
     </section>
@@ -193,6 +193,7 @@
     <section id="cerrarsesion">
         <button class="cerrar-btn" type="button" onclick="cerrarSesion();">Cerrar sesión</button>
     </section>
+    <button onclick="pagar();">Pagar</button>
     <script src="./app.js"></script>
 </body>
 
