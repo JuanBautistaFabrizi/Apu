@@ -435,7 +435,7 @@ p {
 
 
 @keyframes lluviaburbujas{
-  0%{
+  100%{
       bottom: 0;
       opacity: 0;
   }
@@ -448,7 +448,7 @@ p {
   85%{
       transform: translateX(-10px);
   }
-  100%{
+  0%{
       bottom: 100vh;
   }
 }
