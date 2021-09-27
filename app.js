@@ -83,91 +83,128 @@ function bebidasAlcoholicas() {
 
 let carritos = [];
 
-/* let alfajor = document.getElementById("alfajor");
-let gummiMilo = document.getElementById("gummiMilo");
-let chupetin = document.getElementById("chupetin");
-let sugus = document.getElementById("sugus");
-let yummys = document.getElementById("yummys");
-let chocolate = document.getElementById("chocolate");
+var Producto = {
+    nombre: '',
+    precio: 0
+};
+
+
+var alfajor = Object.create(Producto);
+alfajor.nombre = 'alfajor';
+alfajor.precio = 20;
+
+var gummiMilo = Object.create(Producto);
+gummiMilo.nombre = 'Gummi Venus de Milo';
+gummiMilo.precio = 120;
+
+var chupetin = Object.create(Producto);
+chupetin.nombre = 'chupetin';
+chupetin.precio = 20;
+
+var sugus = Object.create(Producto);
+sugus.nombre = 'sugus';
+sugus.precio = 60;
+
+var yummys = Object.create(Producto);
+yummys.nombre = 'yummys';
+yummys.precio = 120;
+
+var gummiMilo = Object.create(Producto);
+chocolate.nombre = 'chocolate';
+chocolate.precio = 120;
+
+var buzzcola = Object.create(Producto);
+buzzcola.nombre = 'buzzcola';
+buzzcola.precio = 80;
+
+var limonada = Object.create(Producto);
+limonada.nombre = 'limonada';
+limonada.precio = 60;
+
+var fanta = Object.create(Producto);
+fanta.nombre = 'fanta';
+fanta.precio = 70;
+
+var limalimon = Object.create(Producto);
+limalimon.nombre = 'limalimon';
+limalimon.precio = 30;
+
+var gatorade = Object.create(Producto);
+gatorade.nombre = 'gatorade';
+gatorade.precio = 100;
+
+var cepita = Object.create(Producto);
+cepita.nombre = 'cepita';
+cepita.precio = 40;
+
+var duff = Object.create(Producto);
+duff.nombre = 'duff';
+duff.precio = 90;
+
+var fuddBerr = Object.create(Producto);
+fuddBerr.nombre = 'fuddBerr';
+fuddBerr.precio = 90;
+
+var blueBronco = Object.create(Producto);
+blueBronco.nombre = 'Blue Bronco';
+blueBronco.precio = 120;
+
+var flamingHomer = Object.create(Producto);
+flamingHomer.nombre = 'Flaming Homer';
+flamingHomer.precio = 150;
+
+var energyDrink = Object.create(Producto);
+energyDrink.nombre = 'Energy Drink';
+energyDrink.precio = 100;
+
+var forgetAlready = Object.create(Producto);
+forgetAlready.nombre = 'Forget Already';
+forgetAlready.precio = 130;
 
 
 
-alfajor.addEventListener("click",sumarItem);
-gummiMilo.addEventListener("click",sumarItem);
-chupetin.addEventListener("click",sumarItem);
-sugus.addEventListener("click",sumarItem);
-yummys.addEventListener("click",sumarItem);
-chocolate.addEventListener("click",sumarItem); */
+let carritos = [];
+
+let btnalfajor = document.getElementById("btnalfajor");
+let btngummiMilo = document.getElementById("btngummiMilo");
+let btnchupetin = document.getElementById("btnchupetin");
+let btnsugus = document.getElementById("btnsugus");
+let btnyummys = document.getElementById("btnyummys");
+let btnchocolate = document.getElementById("btnchocolate");
+let btnbuzzcola = document.getElementById("btnbuzzcola");
+let btnlimonada = document.getElementById("btnlimonada");
+let btnfanta = document.getElementById("btnfanta");
+let btnlimalimon = document.getElementById("btnlimalimon");
+let btngatorade = document.getElementById("btngatorade");
+let btncepita = document.getElementById("btncepita");
+let btnDuff = document.getElementById("btnDuff");
+let btnFuddBerr = document.getElementById("btnFuddBerr");
+let btnBlueBronco = document.getElementById("btnBlueBronco");
+let btnFlamingHomer = document.getElementById("btnFlamingHomer");
+let btnEnergyDrink = document.getElementById("btnEnergyDrink");
+let btnForgetAlready = document.getElementById("btnForgetAlready");
 
 
 
 
 
-/* let producto = {
-    alfajor : {
-        nombre:'alfajor'
-        
-    },
-    gummiMilo : {
-        
-        nombre:'Gummi Venus de Milo'
-    },
-    chupetin : {
-        
-        nombre: 'chupetin'
-    },
-    sugus : {
-        
-        nombre:'sugus'
-    },
-    yummis : {
-        
-        nombre:'yummis'
-    },
-    chocolate : {
-        
-        nombre:'chocolate'
-    },
-    cola : {
-        nombre:'cola'
-    },
-    limonada : {
-        nombre:'limonada'
-    },
-    fanta : {
-        nombre:'fanta'
-    },
-    limaLimon : {
-        nombre:'lima limon'
-    },
-    gatorade : {
-        nombre:'gatorade'
-    },
-    cepita : {
-        nombre:'cepita'
-    },
-} */
-
-function init() {
-    function Producto(nombre, precio) {
-        this.nombre = nombre;
-        this.precio = precio;
-    }
-
-    let alfajor = new Producto('alfajor', 50);
-    let gummiMilo = new Producto('Gummi Venus de Milo', 200);
-    let chupetin = new Producto('chupetin', 20);
-    let sugus = new Producto('sugus', 40);
-    let yummys = new Producto('yummys', 60);
-    let chocolates = new Producto('chocolates', 100);
-    let buzzCola = new Producto('buzz cola', 40);
-    let limonada = new Producto('limonada', 30);
-    let fanta = new Producto('fanta', 35);
-    let limaLimon = new Producto('lima limon', 40);
-    let gatorade = new Producto('gatorade', 70);
-
-    console.log(alfajor);
-}
+btnalfajor.addEventListener("click",sumarItem(alfajor));
+btngummiMilo.addEventListener("click",sumarItem(gummiMilo));
+btnchupetin.addEventListener("click",sumarItem(chupetin));
+btnsugus.addEventListener("click",sumarItem(sugus));
+btnyummys.addEventListener("click",sumarItem(yummys));
+btnchocolate.addEventListener("click",sumarItem(chocolate));
+btnbuzzcola.addEventListener("click",sumarItem(buzzcola));
+btnlimonada.addEventListener("click",sumarItem(limonada));
+btnfanta.addEventListener("click",sumarItem(fanta));
+btnlimalimon.addEventListener("click",sumarItem(limalimon));
+btngatorade.addEventListener("click",sumarItem(gatorade));
+btncepita.addEventListener("click",sumarItem(cepita));
+btnDuff.addEventListener("click",sumarItem(duff));
+btnFuddBerr.addEventListener("click",sumarItem(fuddBerr));
+btnBlueBronco.addEventListener("click",sumarItem(blueBronco));
+btnFlamingHomer.addEventListener("click",sumarItem(flamingHomer));
+btnForgetAlready.addEventListener("click",sumarItem(forgetAlready));
 
 
 
@@ -181,5 +218,12 @@ function cerrarSesion() {
     window.location.replace("./login.html");
 }
 
-
+function pagar() {
+    let sum = 0;
+    for (let i = 0; i < carritos.length; i++) {
+        sum += carritos[i].precio;
+    }
+    console.log(sum);
+    alert(sum);
+}
 
