@@ -1,43 +1,43 @@
-function store(){
+function store() {
 
     var name = document.getElementById('name');
     var pw = document.getElementById('pw');
-    
+
     var lowerCaseLetters = /[a-z]/g;
     var upperCaseLetters = /[A-Z]/g;
     var numbers = /[0-9]/g;
 
-    if(name.value.length == 0){
-        alert('Ponga su emails');
+    var formularioRegister = document.getElementById('formRegister');
+    formularioRegister.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    }else if(pw.value.length == 0){
-        alert('Por favor pongas su paswords');
+        if (name.value.length == 0) {
+            alert("Ponga su emails");
+        } else if (pw.value.length == 0) {
+            alert("Por favor pongas su paswords");
+        } else if (name.value.length == 0 && pw.value.length == 0) {
+            alert("Por favor ponga sus emails y su paswords");
+        } else if (pw.value.length > 8) {
+            alert("No puede tener más de 8 caracteres");
+        } else if (!pw.value.match(numbers)) {
+            alert("Agregue un numeros");
+        } else if (!pw.value.match(upperCaseLetters)) {
+            alert("Agregue una mayúsculas");
+        } else if (!pw.value.match(lowerCaseLetters)) {
+            alert("Agregue una minúsculas");
+        } else {
+            localStorage.setItem("name", name.value);
+            localStorage.setItem("pw", pw.value);
+            alert("Su cuentas ha sido creadas");
+            window.location.replace("./login.html");
+            location.href = login.html
+            console.log(pw.value);
+        }
 
-    }else if(name.value.length == 0 && pw.value.length == 0){
-        alert('Por favor ponga sus emails y su paswords');
-
-    }else if(pw.value.length > 8){
-        alert('No puede tener más de 8 caracteres');
-
-    }else if(!pw.value.match(numbers)){
-        alert('Agregue un numeros');
-
-    }else if(!pw.value.match(upperCaseLetters)){
-        alert('Agregue una mayúsculas');
-
-    }else if(!pw.value.match(lowerCaseLetters)){
-        alert('Agregue una minúsculas');
-
-    }else{
-        localStorage.setItem('name', name.value);
-        localStorage.setItem('pw', pw.value);
-        alert('Su cuentas ha sido creadas');
-        window.location.replace("./login.html");
-        console.log(pw.value);
-    }
+    })
 }
 
-function check(){
+function check() {
     var storedName = localStorage.getItem('name');
     var storedPw = localStorage.getItem('pw');
 
@@ -45,34 +45,39 @@ function check(){
     var userPw = document.getElementById('userPw');
     var userRemember = document.getElementById("rememberMe");
 
-    if(userName.value == storedName && userPw.value == storedPw){
-        alert('Estás logueados');
-        
-        window.location.replace("./menus.html");
-        
-    }else{
-        alert('Error logueandotes');
-    }
+    var formularioLogin = document.getElementById('formLogin');
+    formularioLogin.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (userName.value == storedName && userPw.value == storedPw) {
+            alert("Estás logueados");
+
+            window.location.replace("./menus.html");
+        } else {
+            alert("Error logueandotes");
+        }
+
+    })
 }
 
 
-        
+
 function bienvenido() {
     window.location.replace("./login.html");
 }
-        
+
 function bebidasAlcoholicas() {
     let edad = prompt("Decinos tu edad");
     edad = parent(edad);
     if (edad >= 18) {
         window.location.replace("./bebidasalcoholicas.html");
-    }else{
+    } else {
         alert("sabés cuanta cindor te hace faltas!!!!!!");
     }
 }
-        
 
-    
+
+
 
 
 
@@ -96,7 +101,7 @@ chocolate.addEventListener("click",sumarItem); */
 
 
 
-    
+
 
 /* let producto = {
     alfajor : {
@@ -143,8 +148,8 @@ chocolate.addEventListener("click",sumarItem); */
     },
 } */
 
-function init () {
-    function Producto(nombre,precio){
+function init() {
+    function Producto(nombre, precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
@@ -157,7 +162,7 @@ function init () {
     let chocolates = new Producto('chocolates', 100);
     let buzzCola = new Producto('buzz cola', 40);
     let limonada = new Producto('limonada', 30);
-    let fanta = new Producto('fanta',35);
+    let fanta = new Producto('fanta', 35);
     let limaLimon = new Producto('lima limon', 40);
     let gatorade = new Producto('gatorade', 70);
 
@@ -175,6 +180,6 @@ console.log(carritos);
 function cerrarSesion() {
     window.location.replace("./login.html");
 }
-        
+
 
 
