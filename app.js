@@ -61,27 +61,22 @@ function check() {
 }
 
 
-
+        
 function bienvenido() {
-    window.location.replace("./login.html");
+    window.location.replace("./register.html");
 }
-
+        
 function bebidasAlcoholicas() {
     let edad = prompt("Decinos tu edad");
-    edad = parent(edad);
+    edad =parseInt(edad);
+    
     if (edad >= 18) {
         window.location.replace("./bebidasalcoholicas.html");
-    } else {
+    }else{
         alert("sabés cuanta cindor te hace faltas!!!!!!");
     }
 }
-
-
-
-
-
-
-let carritos = [];
+        
 
 var Producto = {
     nombre: '',
@@ -107,9 +102,9 @@ sugus.precio = 60;
 
 var yummys = Object.create(Producto);
 yummys.nombre = 'yummys';
-yummys.precio = 120;
+yummys.precio = 80;
 
-var gummiMilo = Object.create(Producto);
+var chocolate = Object.create(Producto);
 chocolate.nombre = 'chocolate';
 chocolate.precio = 120;
 
@@ -188,29 +183,32 @@ let btnForgetAlready = document.getElementById("btnForgetAlready");
 
 
 
-btnalfajor.addEventListener("click",sumarItem(alfajor));
-btngummiMilo.addEventListener("click",sumarItem(gummiMilo));
-btnchupetin.addEventListener("click",sumarItem(chupetin));
-btnsugus.addEventListener("click",sumarItem(sugus));
-btnyummys.addEventListener("click",sumarItem(yummys));
-btnchocolate.addEventListener("click",sumarItem(chocolate));
-btnbuzzcola.addEventListener("click",sumarItem(buzzcola));
-btnlimonada.addEventListener("click",sumarItem(limonada));
-btnfanta.addEventListener("click",sumarItem(fanta));
-btnlimalimon.addEventListener("click",sumarItem(limalimon));
-btngatorade.addEventListener("click",sumarItem(gatorade));
-btncepita.addEventListener("click",sumarItem(cepita));
-btnDuff.addEventListener("click",sumarItem(duff));
-btnFuddBerr.addEventListener("click",sumarItem(fuddBerr));
-btnBlueBronco.addEventListener("click",sumarItem(blueBronco));
-btnFlamingHomer.addEventListener("click",sumarItem(flamingHomer));
-btnForgetAlready.addEventListener("click",sumarItem(forgetAlready));
+btnalfajor.addEventListener("click",() =>{sumarItem(alfajor)});
+btngummiMilo.addEventListener("click",() => {sumarItem(gummiMilo)});
+btnchupetin.addEventListener("click",() =>{sumarItem(chupetin)});
+btnsugus.addEventListener("click",() => {sumarItem(sugus)});
+btnyummys.addEventListener("click",() => {sumarItem(yummys)});
+btnchocolate.addEventListener("click",() => {sumarItem(chocolate)});
+btnbuzzcola.addEventListener("click",() => {sumarItem(buzzcola)});
+btnlimonada.addEventListener("click",() => {sumarItem(limonada)});
+btnfanta.addEventListener("click",() => {sumarItem(fanta)});
+btnlimalimon.addEventListener("click",() => {sumarItem(limalimon)});
+btngatorade.addEventListener("click",() => {sumarItem(gatorade)});
+btncepita.addEventListener("click",() => {sumarItem(cepita)});
+btnDuff.addEventListener("click",() => {sumarItem(duff)});
+btnFuddBerr.addEventListener("click",() => {sumarItem(fuddBerr)});
+btnBlueBronco.addEventListener("click",() => {sumarItem(blueBronco)});
+btnFlamingHomer.addEventListener("click",() => {sumarItem(flamingHomer)});
+btnForgetAlready.addEventListener("click",() => {sumarItem(forgetAlready)});
+
 
 
 
 function sumarItem(item) {
     carritos.push(item)
 }
+    
+    
 console.log(carritos);
 
 
@@ -223,7 +221,6 @@ function pagar() {
     for (let i = 0; i < carritos.length; i++) {
         sum += carritos[i].precio;
     }
-    console.log(sum);
-    alert(sum);
+    
+    alert(`Su facturas por su compras es de $${sum}`);
 }
-
