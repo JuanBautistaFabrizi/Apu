@@ -26,6 +26,7 @@ body {
   margin-left: auto;
 }
 /*efecto recomendado glass*/
+
 .glassmorphim {
   display: block;
   max-width: 80vw;
@@ -52,13 +53,13 @@ body {
   margin-top: -10px;
 }
 
-.nav-contenidos, ul {
+.nav-contenidos {
   margin: 0;
   float: right;
   display: flex;
   list-style-type: none;
 }
-.nav-contenido, li {
+.nav-contenido {
   display: inline-block;
   margin-left: 30px;
   font-size: 17px;
@@ -70,6 +71,7 @@ body {
     color: #ffffff;
 
 }
+
 /* idea para textos*/
 .texto-index {
   margin-top: 15vh;
